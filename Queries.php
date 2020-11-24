@@ -4,39 +4,11 @@
     
     </style>
     <head>
-        <title>CPSC 304 Milestone 3</title>
+        <title>UBC Housing Database</title>
         <style>
 
-        .wrapper {
-            text-align:center
-        }
-        .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        padding-right: 26px;
-        padding-left: 26px;
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        border:2px solid black;
-        }
 
-        .dropdown {
-        position: relative;
-        display: inline-block;
-        }
-
-        .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        }
-
+        
         .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -44,6 +16,164 @@
         display: block;
         cursor: pointer;
         }
+        .tableWrapper {
+        overflow: auto;
+        height: 300px;
+        box-sizing: border-box;
+        }
+        h1 {
+            font-family: "Lucida Console", Courier, monospace;
+            
+        }
+        h2 {
+            font-family: "Lucida Console", Courier, monospace;
+            
+        }
+        h2 {
+            font-family: "Lucida Console", Courier, monospace;
+            
+        }
+        h4 {
+            font-family: "Lucida Console", Courier, monospace;
+            
+        }
+        h5 {
+            font-family: "Lucida Console", Courier, monospace;
+            
+        }
+        h6 {
+            font-family: "Lucida Console", Courier, monospace;
+            
+        }
+        table {
+            width: 100%;
+            padding-top: 5px;
+            border-spacing: 5px;
+            border-collapse: separate;
+            text-align: left;
+            vertical-align: bottom;
+            font-size: 16px;
+        }
+        thead tr th {
+            position: sticky;
+            top:0;
+            height: 38px;
+            padding-top: 16px;
+            padding-bottom: 9px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background-color: rgb(77, 164, 235);
+            color: #FFFFFF;
+            font-family: "BlsW-Bd", "Trebuchet MS", Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            border:2px solid black;
+            
+        }
+
+        th:hover{
+            background-color: rgb(77, 150, 200);
+        }
+        tr:nth-child(odd) {
+            background-color: #B0E0E6;
+        }
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+        td {
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 16px;
+            padding-right: 16px;
+            color: #000000;
+            font-weight: 300;
+        }
+        th {
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 6px;
+            padding-right: 16px;
+            background-color: #6D7376;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+
+        .headerWrapper {
+            text-align: center;
+        }
+
+        .headerWrapper a {
+    webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+
+    display: inline-block;
+    
+    border:2px solid black;
+    background-color: rgba(255,255,255,0);
+    color:black;
+    padding: 20px;
+    font-family: "BlsW-Bd", "Trebuchet MS", Helvetica, Arial, sans-serif;;
+    font-weight: bold;
+    font-size: 11pt;
+    border-radius: 8px;
+    transition: background-color 500ms, color 500ms;
+    margin: 10px;
+    text-align: center;
+
+    
+    
+}
+    form {
+        font-size: 20;
+    }
+
+    .headerWrapper a:hover {
+        background-color: rgb(80, 91, 97);
+        color: whitesmoke;
+        cursor:pointer;
+        transition: background-color 500ms, color 500ms;
+        
+    }
+
+    input[type=submit] {
+        webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+
+        text-decoration: none;
+        color: initial;
+
+        display: inline-block;
+        
+        border:2px solid black;
+        background-color: rgba(255,255,255,0);
+        color:black;
+        padding: 10px 30px 10px 30px;
+        font-family: "BlsW-Bd", "Trebuchet MS", Helvetica, Arial, sans-serif;;
+        font-weight: bold;
+        font-size: 11pt;
+        border-radius: 8px;
+        transition: background-color 500ms, color 500ms;
+        margin: 10px;
+        text-align: center;
+    }
+    input[type=submit]:hover {
+        background-color: rgb(80, 91, 97);
+        color: whitesmoke;
+        cursor:pointer;
+        transition: background-color 500ms, color 500ms;
+
+    }
+
+    .image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
 
          
 
@@ -57,37 +187,51 @@
 
         .dropdown:hover .dropdown-content {display: block;}
 
-        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        .dropdown:hover .dropbtn {background-color: #0000CD;}
         </style>
 
     </head>
 
 
 
-    <body>
+    <body style="background-color: rgb(228,228,228)">
 
     <!-- TITLE -->
-    <h1 style="text-align: center">Milestone 3: UBC Residence Organizer</h1>
+    <h1 style="text-align: center">UBC Housing Database</h1>
     
     <!-- Dropdown Menu -->
-    <div class="wrapper" style="text-align: left; margin-top: 80px; margin-left: 50px">
+    <!-- <div class="wrapper" style="text-align: left; margin-top: 80px; margin-left: 50px">
         <div class="dropdown">
             <button class="dropbtn">Choose Query</button>
             <div class="dropdown-content">
-                    <a href="milestone3.php?displayTupleRequest=&insertDisplay=Submit" id="insert">Insert House Member</a>
-                    <a href="milestone3.php?displayTupleRequest=&updateRoomDisplay=Submit" id="update">Update Room Status</a>
-                    <a href="milestone3.php?displayTupleRequest=&updateStudySpaceDisplay=Submit" id="update">Update Study Space Status</a>
-                    <a href="milestone3.php?displayTupleRequest=&deleteDisplay=Submit" id="delete">Remove House Member</a>
-                    <a href="milestone3.php?displayTupleRequest=&selectionDisplay=Submit" id="selection">Budget Planning (Selection)</a>
-                    <a href="milestone3.php?displayTupleRequest=&projectionDisplay=Submit" id="projection">Find mixed gender houses (Projection)</a>
-                    <a href="milestone3.php?displayTupleRequest=&joinDisplay=Submit" id="join">Find lounges for food break (Join)</a>
-                    <a href="milestone3.php?displayTupleRequest=&divisionDisplay=Submit" id="division">Similar courses with your roommates (Division)</a>
-                    <a href="milestone3.php?displayTupleRequest=&groupbyDisplay=Submit" id="groupby">Find average age within each room (Group By)</a>
-                    <a href="milestone3.php?displayTupleRequest=&havingDisplay=Submit" id="having">Find big residence (Group By/ Having)</a>
-                    <a href="milestone3.php?displayTupleRequest=&nestedGroupByDisplay=Submit" id="nested">Find floormates with same courses (Nested Group By)</a>
-            </div>
+                
+                    <a href="milestone3.php?displayTupleRequest=&insertDisplay=Submit" id="insert">Insert</a>
+                    <a href="milestone3.php?displayTupleRequest=&deleteDisplay=Submit" id="delete">Delete</a>
+                    <a href="milestone3.php?displayTupleRequest=&updateRoomDisplay=Submit" id="update">Update</a>
+                    <a href="milestone3.php?displayTupleRequest=&selectionDisplay=Submit" id="selection">Selection</a>
+                    <a href="milestone3.php?displayTupleRequest=&projectionDisplay=Submit" id="projection">Projection</a>
+                    <a href="milestone3.php?displayTupleRequest=&joinDisplay=Submit" id="join">Join</a>
+                    <a href="milestone3.php?displayTupleRequest=&groupbyDisplay=Submit" id="groupby">Aggregation with Group By</a>
+                    <a href="milestone3.php?displayTupleRequest=&havingDisplay=Submit" id="having">Aggregation with Having</a>
+                    <a href="milestone3.php?displayTupleRequest=&nestedGroupByDisplay=Submit" id="nested">Nested Aggregation with Group By</a>
+                    <a href="milestone3.php?displayTupleRequest=&divisionDisplay=Submit" id="division">Division</a>
+            </span>
             
         </div>
+    </div> -->
+
+    <div style="display:inline-block" class="headerWrapper">
+        <a href="milestone3.php?displayTupleRequest=&insertDisplay=Submit">Insert</a>
+        <a href="milestone3.php?displayTupleRequest=&deleteDisplay=Submit">Delete</a>
+        <a href="milestone3.php?displayTupleRequest=&updateRoomDisplay=Submit">Update</a>
+        <a href="milestone3.php?displayTupleRequest=&selectionDisplay=Submit">Selection</a>
+        <a href="milestone3.php?displayTupleRequest=&projectionDisplay=Submit">Projection</a>
+        <a href="milestone3.php?displayTupleRequest=&joinDisplay=Submit">Join</a>
+        <a href="milestone3.php?displayTupleRequest=&groupbyDisplay=Submit">Aggregation with Group By</a>
+        <a href="milestone3.php?displayTupleRequest=&havingDisplay=Submit">Aggregation with Having</a>
+        <a href="milestone3.php?displayTupleRequest=&nestedGroupByDisplay=Submit">Nested Aggregation with Group By</a>
+        <a href="milestone3.php?displayTupleRequest=&divisionDisplay=Submit" >Division</a>
+    
     </div>
 
 
@@ -101,38 +245,16 @@
     <div>
     </div>
 
- 
-
-        <!-- <h2>Return residences where miniminum price is in your budget.</h2>
-        <form method="GET" action="milestone3.php"> 
-            <input type="hidden" id="selectTupleRequest" name="selectTupleRequest">
-            <input type="submit" name="selectionRequest"></p>
-        </form>
-        
-        <form method="POST" action="milestone3.php">
-            Price: <input type="text" name="price"> <br /><br />
-        </form>
-
-        <h2>Display query results</h2>
-        <form method="GET" action="milestone3.php">
-            <input type="hidden" id="displayTupleRequest" name="displayTupleRequest">
-            <input type="submit" name="insertDisplay"></p>
-            
-        </form> -->
-
-        
         <?php
         $success = True; //keep track of errors so it redirects the page only if there are no errors
         $db_conn = NULL; // edit the login credentials in connectToDB()
         
 
+    // This function ensures that we are connected to the oracle database
         function connectToDB() {
             global $db_conn;
-            
-
-            // Your username is ora_(CWL_ID) and the password is a(student number). For example, 
-            // ora_platypus is the username and a12345678 is the password.
-            $db_conn = OCILogon("ora_ashaaban", "a85490290", "dbhost.students.cs.ubc.ca:1522/stu");
+        
+            $db_conn = OCILogon("ora_CWL", "aSTUDENTNUMBER", "dbhost.students.cs.ubc.ca:1522/stu");
             
 
             if ($db_conn) {  
@@ -145,14 +267,16 @@
             }
         }
 
-        function executePlainSQL($cmdstr) { //takes a plain (no bound variables) SQL command and executes it
-            //echo "<br>running ".$cmdstr."<br>";
+
+    //takes a plain (no bound variables) SQL command and executes it
+        function executePlainSQL($cmdstr) { 
             global $db_conn, $success;
 
             $statement = OCIParse($db_conn, $cmdstr); 
             //There are a set of comments at the end of the file that describe some of the OCI specific functions and how they work
 
             if (!$statement) {
+                throw new Exception("There's a problem here sir.");
                 echo "<br>Cannot parse the following command: " . $cmdstr . "<br>";
                 $e = OCI_Error($db_conn); // For OCIParse errors pass the connection handle
                 echo htmlentities($e['message']);
@@ -161,6 +285,7 @@
 
             $r = OCIExecute($statement, OCI_DEFAULT);
             if (!$r) {
+                throw new Exception("There's a problem here sir.");
                 echo "<br>Cannot execute the following command: " . $cmdstr . "<br>";
                 $e = oci_error($statement); // For OCIExecute errors pass the statementhandle
                 echo htmlentities($e['message']);
@@ -169,6 +294,7 @@
 
 			return $statement;
         }
+
 
         function executeBoundSQL($cmdstr, $list) {
             /* Sometimes the same statement will be executed several times with different values for the variables involved in the query.
@@ -180,6 +306,7 @@
 			$statement = OCIParse($db_conn, $cmdstr);
 
             if (!$statement) {
+                throw new Exception("There's a problem here sir.");
                 echo "<br>Cannot parse the following command: " . $cmdstr . "<br>";
                 $e = OCI_Error($db_conn);
                 echo htmlentities($e['message']);
@@ -196,6 +323,7 @@
 
                 $r = OCIExecute($statement, OCI_DEFAULT);
                 if (!$r) {
+                    throw new Exception("There's a problem here sir.");
                     echo "<br>Cannot execute the following command: " . $cmdstr . "<br>";
                     $e = OCI_Error($statement); // For OCIExecute errors, pass the statementhandle
                     echo htmlentities($e['message']);
@@ -206,7 +334,7 @@
         }
 
         
-        // Return table column nam
+        // Return table column names
         function getTableLabels($cmdstr) {
             global $db_conn, $success;
 
@@ -238,9 +366,10 @@
             return $result;
         }
 
-        function printResult($result, $fieldNames) { //prints results from a select statement
+        //prints results from a select statement
+        function printResult($result, $fieldNames) { 
             echo "<div class=tablewrapper style='text-align: center'>";
-            echo "<table id='HouseMember'>";
+            echo "<table>";
 
             echo "<thead>";
             foreach($fieldNames as $i) {
@@ -248,13 +377,12 @@
             }
             echo "</thead>";
             
-            //TODO: If statement for each query; hardcode table labels using "<th>"
-           // echo "<tr><th>studentID<th><th>roomID<th></tr>";
+
             while ($row  = oci_fetch_array($result, OCI_BOTH)) {
 
                
                 echo "<tr>";
-                for($i=0; $i<= count($row)/2; $i++) {
+                for($i=0; $i< count($row)/2; $i++) {
                     
                     echo "<td>" . $row[$i] . "</td>";
                 }
@@ -266,7 +394,7 @@
             echo "</div>";
         }
 
-        
+        //Handles the UI display of "Insert" in the dropdown menu
         function handleInsertDisplay() {
             global $db_conn;
            
@@ -274,9 +402,7 @@
             $result = executePlainSQL("SELECT * FROM HouseMember");
             $fieldNames = getTableLabels("SELECT * FROM HouseMember");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            echo printResult($result, $fieldNames);
 
             echo "<br>";
             echo "<h2>Rooms</h2>";
@@ -284,13 +410,13 @@
             $result2 = executePlainSQL("SELECT * FROM Room");
             $fieldNames2 = getTableLabels("SELECT * FROM Room");
 
-            if (($row = oci_fetch_row($result2)) != false) {
-                echo printResult($result2, $fieldNames2);
-            }
+            
+            echo printResult($result2, $fieldNames2);
+            
 
             echo "<br><br>";
-            echo "<h3>Insert a new house member (make sure roomID exists!):</h3>";
             echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
+            echo "Insert a new house member (make sure roomID exists!): <br /><br />";
             echo "<input type='hidden' id='insertHouseMember' name='insertQueryRequest'>";
             echo "Student ID: <input type='text' name='studentID'> <br /><br />";
             echo "Room ID: <input type='text' name='roomID'> <br /><br />";
@@ -308,6 +434,8 @@
            
         }
 
+        //This and all the other 'Request' functions handle the running of the
+        //submitted SQL query and preview of the result 
         function handleInsertRequest() {
             global $db_conn;
 
@@ -323,27 +451,34 @@
 
             $alltuples = array (
                 $tuple
-			);
+            );
             executeBoundSQL("insert into HouseMember values (:bind1, :bind2, :bind3, :bind4, :bind5, :bind6)", $alltuples);
+
             OCICommit($db_conn);
 
 
             $result = executePlainSQL("SELECT * FROM HouseMember");
 			$fieldNames = getTableLabels("SELECT * FROM HouseMember");
-			echo "House Member has been successfully added!";
+            echo "<p style='font-size:20px'>House Member has been successfully added!</p>";
+            echo "<h2>House Members</h2>";
             printResult($result, $fieldNames);
+
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Insert.png' alt='Insert Query' class='image'>";
+            echo"<br>";
         }
 
+        //Handles the UI display of "Update" in the dropdown menu
         function handleUpdateRoomDisplay() {
             global $db_conn;
            
-            echo "<h2>House Member</h2>";
+            echo "<h2>House Members</h2>";
             $result = executePlainSQL("SELECT * FROM HouseMember");
             $fieldNames = getTableLabels("SELECT * FROM HouseMember");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            
+            echo printResult($result, $fieldNames);
+
 
             echo "<br>";
             echo "<h2>Rooms</h2>";
@@ -351,13 +486,13 @@
             $result2 = executePlainSQL("SELECT * FROM Room");
             $fieldNames2 = getTableLabels("SELECT * FROM Room");
 
-            if (($row = oci_fetch_row($result2)) != false) {
-                echo printResult($result2, $fieldNames2);
-            }
+            
+            echo printResult($result2, $fieldNames2);
+            
 
             echo "<br><br>";
-            echo "<h3>Insert the following values (make sure roomID exists!):</h3>";
             echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
+            echo "Insert the following values (make sure roomID exists!): <br /><br />";
             echo "<input type='hidden' id='updateHouseMember' name='updateRoomQueryRequest'>";
             echo "What is your student ID: <input type='text' name='studentID'> <br /><br />";
             echo "What is your NEW Room ID: <input type='text' name='roomID'> <br /><br />";
@@ -377,6 +512,9 @@
 
             $roomID = $_POST['roomID'];
             $studentID = $_POST['studentID'];
+            if ($roomID == '') {
+                throw new Exception("empty roomID");
+            }
 
             executePlainSQL("update HouseMember set roomID ='" . $roomID . "' where studentID ='" . $studentID . "'");
             OCICommit($db_conn);
@@ -384,44 +522,27 @@
 
             $result = executePlainSQL("SELECT * FROM HouseMember");
             $fieldNames = getTableLabels("SELECT * FROM HouseMember");
+
+            echo "<p style='font-size:20px'>The room has been updated.</p>";
+            echo "<h2>House Members</h2>";
             printResult($result, $fieldNames);
+
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Update.png' alt='Update Query' class='image'>";
+            echo"<br>";
 		}
 		
-
-        function handleUpdateStudySpaceDisplay() {
-            global $db_conn;
-           
-            echo "<h2>Residence</h2>";
-            $result = executePlainSQL("SELECT * FROM Residence");
-            $fieldNames = getTableLabels("SELECT * FROM Residence");
-
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
-
-            echo "<br><br>";
-            echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
-            echo "<input type='hidden' id='updateHouseMember' name='updateStudySpaceQueryRequest'>";
-            echo "Enter residence name: <input type='text' name='residenceName'> <br /><br />";
-            echo "<input type='submit' value='Update' name='updateStudySpaceSubmit'></p>";
-            echo "</form>";
-
-
-           
-        }
-
-        // TODO: handleStudySpaceRoomRequest() function
-        
+        //Handles the UI display of "Delete" in the dropdown menu
         function handleDeleteDisplay() {
             global $db_conn;
            
-            echo "<h2>House Member</h2>";
+            echo "<h2>House Members</h2>";
             $result = executePlainSQL("SELECT * FROM HouseMember");
             $fieldNames = getTableLabels("SELECT * FROM HouseMember");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            
+            echo printResult($result, $fieldNames);
+
 
             
             echo "<br><br>";
@@ -429,7 +550,6 @@
             echo "<input type='hidden' id='deleteHouseMember' name='deleteQueryRequest'>";
             echo "What is your student ID: <input type='text' name='studentID'> <br /><br />";
             echo "What is your Room ID: <input type='text' name='roomID'> <br /><br />";
-            echo "We are sorry to see you go:( <br /><br />";
             echo "<input type='submit' value='Delete' name='deleteSubmit'></p>";
             echo "</form>";
 
@@ -440,10 +560,12 @@
         function handleDeleteRequest() {
             global $db_conn;
             
-            //Getting the values from user and insert data into the table
-
+            
             $roomID = $_POST['roomID'];
             $studentID = $_POST['studentID'];
+            if ($roomID == '') {
+                throw new Exception("empty roomID");
+            }
 
             executePlainSQL("DELETE FROM HouseMember WHERE studentID ='" . $studentID . "'");
             OCICommit($db_conn);
@@ -451,26 +573,29 @@
 
             $result = executePlainSQL("SELECT * FROM HouseMember");
             $fieldNames = getTableLabels("SELECT * FROM HouseMember");
+            echo "<p style='font-size:20px'>We are sorry to see you go:( </p>";
+            echo "<h2>House Members</h2>";
             printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Delete.png' alt='Delete Query' class='image'>";
+            echo"<br>";
 		}
 
+        //Handles the UI display of "Selection" in the dropdown menu
         function handleSelectionDisplay() {
             global $db_conn;
 		   
-
             echo "<h2>Residences</h2>";
             $result = executePlainSQL("SELECT * FROM Residence");
 			$fieldNames = getTableLabels("SELECT * FROM Residence");
-			
-
-            //I dont think we should show a table for this query? The user then can simply look at table to see all price range rather than typing in budget
-            if (($row = oci_fetch_row($result)) != false) {
-                printResult($result, $fieldNames);
-            }
-
+			            
+            printResult($result, $fieldNames);
+        
             
             echo "<br><br>";
             echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
+            echo "Find residences that have a minimum price within your budget. <br /><br />";
             echo "<input type='hidden' id='selection' name='selectionQueryRequest'>";
             echo "What is your budget?: <input type='text' name='budget'> <br /><br />";
             echo "<input type='submit' value='Enter' name='selectionSubmit'></p>";
@@ -496,33 +621,30 @@
 			$fieldNames = getTableLabels("SELECT *
             FROM Residence
 			WHERE minPrice <= '" . $price ."'");
-
-			printResult($result, $fieldNames);
-
             
+            echo "<p style='font-size:20px'>Here are the residences that meet your budget requirements</p>";
+            echo "<h2>Residences</h2>";
+            printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Selection.png' alt='Selection Query' class='image'>";
+            echo"<br>";
+
         }
 
 
-
+        //Handles the UI display of "Projection" in the dropdown menu
         function handleProjectionDisplay() {
             global $db_conn;
            
             echo "<h2>Houses</h2>";
-            // $result = executePlainSQL("SELECT HouseLoungeIncludes.houseName, HouseLoungeIncludes.loungeNumber
-            //                            FROM HouseName HouseLoungeIncludes
-            //                            WHERE HouseName.houseName = HouseLoungeIncludes.houseName
-            //                            AND  HouseLoungeIncludes.foodAllowed = 1 AND HouseName.hasKitchens = 1");
-            // $fieldNames = getTableLabels("SELECT HouseLoungeIncludes.houseName, HouseLoungeIncludes.loungeNumber
-            //                               FROM HouseName HouseLoungeIncludes
-            //                               WHERE HouseName.houseName = HouseLoungeIncludes.houseName
-            //                               AND  HouseLoungeIncludes.foodAllowed = 1 AND HouseName.hasKitchens = 1");\
 
             $result = executePlainSQL("SELECT * FROM House");
             $fieldNames = getTableLabels("SELECT * FROM House");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            
+            echo printResult($result, $fieldNames);
+            
 
 
             echo "<br><br>";
@@ -539,49 +661,45 @@
 
         
 
-           //What is this function???
         function handleProjectionRequest() {
-			
             global $db_conn;
-
 
             $result = executePlainSQL("SELECT houseName, isMixedGender FROM House");
             $fieldNames = getTableLabels("SELECT houseName, isMixedGender FROM House");
-			printResult($result, $fieldNames);
-
+            echo "<h2>Houses</h2>";
+            printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Projection.png' alt='Projection Query' class='image'>";
+            echo"<br>";
             
         }
+
+        //Handles the UI display of "Join" in the dropdown menu
         function handleJoinDisplay() {
             global $db_conn;
            
             echo "<h2>Houses</h2>";
-            // $result = executePlainSQL("SELECT HouseLoungeIncludes.houseName, HouseLoungeIncludes.loungeNumber
-            //                            FROM HouseName HouseLoungeIncludes
-            //                            WHERE HouseName.houseName = HouseLoungeIncludes.houseName
-            //                            AND  HouseLoungeIncludes.foodAllowed = 1 AND HouseName.hasKitchens = 1");
-            // $fieldNames = getTableLabels("SELECT HouseLoungeIncludes.houseName, HouseLoungeIncludes.loungeNumber
-            //                               FROM HouseName HouseLoungeIncludes
-            //                               WHERE HouseName.houseName = HouseLoungeIncludes.houseName
-            //                               AND  HouseLoungeIncludes.foodAllowed = 1 AND HouseName.hasKitchens = 1");\
 
             $result = executePlainSQL("SELECT * FROM House");
             $fieldNames = getTableLabels("SELECT * FROM House");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            
+            echo printResult($result, $fieldNames);
+            
 
             echo "<br><br>";
+            echo "<h2>House Lounges</h2>";
             $result2 = executePlainSQL("SELECT * FROM HouseLoungeIncludes");
             $fieldNames2 = getTableLabels("SELECT * FROM HouseLoungeIncludes");
 
-            if (($row = oci_fetch_row($result2)) != false) {
-                echo printResult($result2, $fieldNames2);
-            }
+
+            echo printResult($result2, $fieldNames2);
+            
             echo "<br><br>";
             echo "<form method='GET' action='milestone3.php'> <!--refresh page when submitted-->";
             echo "<input type='hidden' id='joinHouseMember' name='joinQueryRequest'>";
-            echo "Find house lounges that allow food and has a kitchen!<br><br>";
+            echo "Find house lounges that allow food and that are in houses that have kitchens.<br><br>";
             echo "<input type='submit' value='Submit' name='joinSubmit'></p>";
             echo "</form>";
 
@@ -606,43 +724,41 @@
                                         FROM House H, HouseLoungeIncludes HL
                                         WHERE H.houseName = HL.houseName
                                         AND  HL.foodAllowed = 1 AND H.hasKitchens = 1");
-			printResult($result, $fieldNames);
+            echo "<h2>Houses</h2>";
+            printResult($result, $fieldNames);
 
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Join.png' alt='Join Query' class='image'>";
+            echo"<br>";
             
         }
 
+        //Handles the UI display of "Division" in the dropdown menu
         function handleDivisionDisplay() {
             global $db_conn;
            
-            echo "<h2>House Member</h2>";
+            echo "<h2>House Members</h2>";
             $result = executePlainSQL("SELECT * FROM HouseMember");
             $fieldNames = getTableLabels("SELECT * FROM HouseMember");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
-            echo "<h2>Courses</h2>";
-            $result2 = executePlainSQL("SELECT * FROM CourseNumber");
-            $fieldNames2 = getTableLabels("SELECT * FROM CourseNumber");
+            
+            echo printResult($result, $fieldNames);
+            
 
-            if (($row = oci_fetch_row($result2)) != false) {
-                echo printResult($result2, $fieldNames2);
-            }
             echo "<h2>Students taking courses</h2>";
             $result3 = executePlainSQL("SELECT * FROM TakeCourse");
             $fieldNames3 = getTableLabels("SELECT * FROM TakeCourse");
 
-            if (($row = oci_fetch_row($result3)) != false) {
-                echo printResult($result3, $fieldNames3);
-            }
+            
+            echo printResult($result3, $fieldNames3);
+            
 
             
             echo "<br><br>";
-            echo "<h3>Enter a course to find all the rooms where some student took that course:</h3>";
             echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
+            echo "Enter a room ID to find courses that are taken by all students in that room <br /><br />";
             echo "<input type='hidden' id='divisionHouseMember' name='divisionQueryRequest'>";
-            echo "What is the course name?: <input type='text' name='courseName'> <br /><br />";
-            echo "What is the course number?: <input type='text' name='courseNum'> <br /><br />";
+            echo "What is the roomID?: <input type='text' name='roomID'> <br /><br />";
             echo "<input type='submit' value='Confirm' name='divisionSubmit'></p>";
             echo "</form>";
 
@@ -654,149 +770,251 @@
 			
             global $db_conn;
 
-            $courseName = $_POST['courseName'];
-            $courseNum = $_POST['courseNum'];
+            $roomID = $_POST['roomID'];
+
+            if ($roomID == '') {
+                throw new Exception("empty roomID");
+            }
+            
 
 
-            $result = executePlainSQL("SELECT distinct h1.roomID
-                                     from HouseMember h1
-                                     where not exists (select tc.courseName
-                                                        from TakeCourse tc
-                                                        where tc.courseName = '" . $courseName ."'
-                                                        AND tc.courseNum = '" . $courseNum ."'
-                                                        minus
-                                                        select tc2.courseName
+            $result = executePlainSQL("SELECT distinct tc.courseName, tc.courseNum
+                                        from TakeCourse tc
+                                        where not exists (select h.studentID
+                                                        from HouseMember h
+                                                        where h.roomID = '" . $roomID . "'
+                                                        minus 
+                                                        select tc2.studentID
                                                         from TakeCourse tc2
-                                                        where tc2.studentID = h1.studentID
-                                                        )");
-            $fieldNames = getTableLabels("SELECT distinct h1.roomID
-                                            from HouseMember h1
-                                            where not exists (select tc.courseName
-                                                              from TakeCourse tc
-                                                              where tc.courseName = '" . $courseName ."'
-                                                              AND tc.courseNum = '" . $courseNum ."'
-                                                               minus
-                                                               select tc2.courseName
-                                                               from TakeCourse tc2
-                                                              where tc2.studentID = h1.studentID
-                                                                )");
+                                                        where tc2.courseName = tc.courseName 
+                                                        and tc2.courseNum = tc.courseNum)");
+            $fieldNames = getTableLabels("SELECT distinct tc.courseName, tc.courseNum
+                                            from TakeCourse tc
+                                            where not exists (select h.studentID
+                                                            from HouseMember h
+                                                            where h.roomID = '" . $roomID . "'
+                                                            minus 
+                                                            select tc2.studentID
+                                                            from TakeCourse tc2
+                                                            where tc2.courseName = tc.courseName 
+                                                            and tc2.courseNum = tc.courseNum)");
 
-			printResult($result, $fieldNames);
+            printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Division.png' alt='Division Query' class='image'>";
+            echo"<br>";
 
             
         }
 
+        //Handles the UI display of "Group By" in the dropdown menu
         function handleGroupByDisplay() {
             global $db_conn;
            
-            echo "<h2>Average age in each room</h2>";
-            $result = executePlainSQL("SELECT roomID, AVG(age)
-                                       FROM HouseMember
-                                       GROUP BY roomID");
-            $fieldNames = getTableLabels("SELECT roomID, AVG(age)
-                                          FROM HouseMember
-                                          GROUP BY roomID");
+            echo "<h2>Students Taking Courses</h2>";
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            $result = executePlainSQL("SELECT * FROM TakeCourse");
+            $fieldNames = getTableLabels("SELECT * FROM TakeCourse");
 
             
+            echo printResult($result, $fieldNames);
+            
+
             echo "<br><br>";
-            echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
+            echo "<h2>Houses that Students live in</h2>";
+            $result2 = executePlainSQL("SELECT * FROM StudentHouse");
+            $fieldNames2 = getTableLabels("SELECT * FROM StudentHouse");
+
+            
+            echo printResult($result2, $fieldNames2);
+            
+            
+            echo "<br><br>";
+            echo "<form method='GET' action='milestone3.php'> <!--refresh page when submitted-->";
             echo "<input type='hidden' id='groupByHouseMember' name='groupByQueryRequest'>";
-            echo "Average age within each room <br /><br />";
+            echo "Click submit to find the number of students taking each course for each house<br><br>";
+            echo "<input type='submit' value='Submit' name='groupBySubmit'></p>";
             echo "</form>";
 
+          
         }
 
-        // TODO: handleGroupByRequest() function
+       function handleGroupByRequest() {
+
+            global $db_conn;
+
+            
+            $result = executePlainSQL("SELECT tc.courseName, tc.courseNum, h.houseName, COUNT(tc.courseName) AS Total_Students
+                                        FROM TakeCourse tc, StudentHouse h
+                                        WHERE tc.studentID = h.studentID
+                                        GROUP BY tc.courseName, tc.courseNum, h.houseName");
+
+            $fieldNames = getTableLabels("SELECT tc.courseName, tc.courseNum, h.houseName, COUNT(tc.courseName) AS Total_Students
+                                            FROM TakeCourse tc, StudentHouse h
+                                            WHERE tc.studentID = h.studentID
+                                            GROUP BY tc.courseName, tc.courseNum, h.houseName");
+            echo "<h2>Number of students taking each course for each house</h2><br>";
+            printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Groupby.png' alt='Groupby Query' class='image'>";
+            echo"<br>";
+
+        }
 
         function handleHavingDisplay() {
             global $db_conn;
            
-            echo "<h2>Average age in each room</h2>";
-            $result = executePlainSQL("SELECT House.residenceName
-                                       FROM House 
-                                       GROUP BY House.residenceName
-                                       HAVING COUNT(*) >= 5");
-            $fieldNames = getTableLabels("SELECT House.residenceName
-                                          FROM House 
-                                          GROUP BY House.residenceName
-                                          HAVING COUNT(*) >= 5");
+            echo "<h2>Houses</h2>";
+            $result = executePlainSQL("SELECT * FROM House");
+            $fieldNames = getTableLabels("SELECT * FROM House");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            
+            echo printResult($result, $fieldNames);
+            
 
             
             echo "<br><br>";
             echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
             echo "<input type='hidden' id='havingHouseMember' name='havingQueryRequest'>";
-            echo "Find residences that have more than 5 houses <br /><br />";
+            echo "Find residences that have <input type='text' name='numHouses'> or more houses <br /><br />";
+            echo "<input type='submit' value='Submit' name='havingSubmit'></p>";
             echo "</form>";
 
         }
 
-        // TODO: handleHavingRequest() function
+
+
+        //Handles the UI display of "Group By with Having" in the dropdown menu
+        function handleHavingRequest() {
+
+            global $db_conn;
+            
+            $numHouses = $_POST['numHouses'];
+            
+            $result = executePlainSQL("SELECT House.residenceName
+                                        FROM House
+                                        GROUP BY House.residenceName
+                                        HAVING COUNT(*) >= '" . $numHouses . "'");
+
+            $fieldNames = getTableLabels("SELECT House.residenceName
+                                            FROM House
+                                            GROUP BY House.residenceName
+                                            HAVING COUNT(*) >= '" . $numHouses . "'");
+                                            
+            echo "<h2>Residences that have " . $numHouses . " or more house(s) </h2><br>";
+            
+            printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Groupbyhaving.png' alt='Groupby Having Query' class='image'>";
+            echo"<br>";
+
+        }
 
         function handleNestedGroupByDisplay() {
             global $db_conn;
            
-            echo "<h2>HouseMember</h2>";
-            $result = executePlainSQL("SELECT COUNT(hm.studentID)
-                                       FROM HouseMember hm, Room r
-                                       WHERE hm.roomID = r.roomID AND hm.floorID = ‘floorID’ AND studentID in (
-                                                SELECT studentID
-                                                FROM TakeCourse
-                                                WHERE courseName = ‘courseName’ AND courseNum = ‘courseNum’)");
-            $fieldNames = getTableLabels("SELECT COUNT(hm.studentID)
-                                          FROM HouseMember hm, Room r
-                                          WHERE hm.roomID = r.roomID AND hm.floorID = ‘floorID’ AND studentID in (
-                                                    SELECT studentID
-                                                    FROM TakeCourse
-                                                    WHERE courseName = ‘courseName’ AND courseNum = ‘courseNum’)");
+            echo "<h2>House Members</h2>";
+            $result = executePlainSQL("SELECT * FROM HouseMember");
+            $fieldNames = getTableLabels("SELECT * FROM HouseMember");
 
-            if (($row = oci_fetch_row($result)) != false) {
-                echo printResult($result, $fieldNames);
-            }
+            
+            echo printResult($result, $fieldNames);
+            
+
+            echo "<h2>Rooms</h2>";
+            $result2 = executePlainSQL("SELECT * FROM Room");
+            $fieldNames2 = getTableLabels("SELECT * FROM Room");
+
+            
+            echo printResult($result2, $fieldNames2);
+            
 
             
             echo "<br><br>";
-            echo "<form method='POST' action='milestone3.php'> <!--refresh page when submitted-->";
-            echo "<input type='hidden' id='deleteHouseMember' name='deleteQueryRequest'>";
-            echo "What course would you like to search for (enter course name, eg. CPSC)?: <input type='text' name='courseName'> <br /><br />";
-            echo "Enter course num (eg. 304): <input type='text' name='courseNum'> <br /><br />";
-            echo "Which floor do you live in (enter Floor ID)? : <input type='text' name='floorID'> <br /><br />";
+            echo "<form method='GET' action='milestone3.php'> <!--refresh page when submitted-->";
+            echo "<input type='hidden' id='nestedGroupByQueryRequest' name='nestedGroupByQueryRequest'>";
+            echo "Find the rooms with the largest average age on each floor. <br>";
             echo "<input type='submit' value='Submit' name='nestedGroupBySubmit'></p>";
             echo "</form>";
 
         }
 
-        // TODO: handleHavingRequest() function
+        function handleNestedGroupByRequest() {
+            global $db_conn;
+            
+            
+            $result = executePlainSQL("SELECT r.floorID, r.roomID, round(avg(h.age), 2) AS Average_age
+                                        from Room r, HouseMember h
+                                        where r.roomID = h.roomID
+                                        group by r.floorID, r.roomID
+                                        HAVING avg(h.age) >= ALL (select avg(h2.age)
+                                            from HouseMember h2, Room r2
+                                            where h2.roomID = r2.RoomID and r2.floorID = r.floorID
+                                            group by r2.roomID)");
+
+            $fieldNames = getTableLabels("SELECT r.floorID, r.roomID, avg(h.age) AS Average_age
+                                            from Room r, HouseMember h
+                                            where r.roomID = h.roomID
+                                            group by r.floorID, r.roomID
+                                            HAVING avg(h.age) >= ALL (select avg(h2.age)
+                                                from HouseMember h2, Room r2
+                                                where h2.roomID = r2.RoomID and r2.floorID = r.floorID
+                                                group by r2.roomID)");
+                                            
+            echo "<h2>Rooms with the largest average age on each floor </h2><br>";
+            
+            printResult($result, $fieldNames);
+            
+            echo"<br><h2>Your SQL Query:<h2><br>";
+            echo "<img src='Nested.png' alt='Nested Aggregation Query' class='image'>";
+            echo"<br>";
+        }
 
 
 
-
+// Responds to any POST request by calling the appropriate function
         function handlePOSTRequest() {
             if (connectToDB()) {
                 if (array_key_exists('updateRoomQueryRequest', $_POST)) {
+                    try {
                     handleUpdateRoomRequest();
-                } else if (array_key_exists('updateStudySpaceQueryRequest', $_POST)) {
-                    handleUpdateStudySpaceRequest();
-                } else if (array_key_exists('insertQueryRequest', $_POST)) {
-                    handleInsertRequest();
-                } else if (array_key_exists('deleteQueryRequest', $_POST)) {
-                    handleDeleteRequest();
-                } else if (array_key_exists('selectionQueryRequest', $_POST)) {
-                    handleSelectionRequest();
-                } else if (array_key_exists('divisionQueryRequest', $_POST)) {
-                    handleDivisionRequest();
-                } else if (array_key_exists('havingQueryRequest', $_POST)) {
-                    handleHavingRequest();
-                } else if (array_key_exists('nestedGroupByQueryRequest', $_POST)) {
-                    handleNestedGroupByRequest();
+                    } catch (Exception $e) {
+                    echo "There is something wrong with your delete request (e.g. non-existent roomID, non-existent studentID). Please try again.";
                 }
+                } else if (array_key_exists('insertQueryRequest', $_POST)) {
+                    try {
+                    handleInsertRequest();
+                    } catch (Exception $e) {
+                        echo "There is something wrong with your insertion request (e.g. non-existent roomID, duplicate studentID). Please try again.";
+                    }
+                } else if (array_key_exists('deleteQueryRequest', $_POST)) {
+                    try {
+                        handleDeleteRequest();
+                    } catch (Exception $e) {
+                        echo "There is something wrong with your delete request (e.g. non-existent roomID, non-existent studentID). Please try again.";
+                    }
+                } else if (array_key_exists('selectionQueryRequest', $_POST)) {
+                    try {
+                        handleSelectionRequest();
+                    } catch (Exception $e) {
+                        echo "There is something wrong with your selction request (e.g. not an integer). Please try again.";
+                    }
+                } else if (array_key_exists('divisionQueryRequest', $_POST)) {
+                    try {
+                    handleDivisionRequest();
+                    } catch (Exception $e) {
+                        echo "There is something wrong with your division request (e.g. non-existent roomID). Please try again.";
+                    }
+                } else if (array_key_exists('havingQueryRequest', $_POST)) {
+                    try{
+                    handleHavingRequest();
+                    } catch (Exception $e) {
+                        echo "There is something wrong with your having request (e.g. not an integer). Please try again.";
+                    }
+                } 
 
                 disconnectFromDB();
             }
@@ -807,8 +1025,7 @@
             OCILogoff($db_conn);
         }
 
-        // HANDLE ALL GET ROUTES
-	// A better coding practice is to have one method that reroutes your requests accordingly. It will make it easier to add/remove functionality.
+        // Responds to any GET request by calling the appropriate function
         function handleGETRequest() {
             if (connectToDB()) {
                 if (array_key_exists('selectTuples', $_GET)) {
@@ -817,8 +1034,6 @@
                     handleInsertDisplay();
                 } else if (array_key_exists('updateRoomDisplay', $_GET)) {
                     handleUpdateRoomDisplay();
-                } else if (array_key_exists('updateStudySpaceDisplay', $_GET)) {
-                    handleUpdateStudySpaceDisplay();
                 } else if (array_key_exists('deleteDisplay', $_GET)) {
                     handleDeleteDisplay();
                 } else if (array_key_exists('selectionDisplay', $_GET)) {
@@ -833,45 +1048,42 @@
                     handleProjectionRequest();
                 }else if (array_key_exists('divisionDisplay', $_GET)) {
                     handleDivisionDisplay();
-                } else if (array_key_exists('groupByDisplay', $_GET)) {
+                } else if (array_key_exists('groupbyDisplay', $_GET)) {
                     handleGroupByDisplay();
+                } else if (array_key_exists('groupByQueryRequest', $_GET)) {
+                    handleGroupByRequest();
                 } else if (array_key_exists('havingDisplay', $_GET)) {
                     handleHavingDisplay();
                 } else if (array_key_exists('nestedGroupByDisplay', $_GET)) {
                     handleNestedGroupByDisplay();
+                } else if (array_key_exists('nestedGroupByQueryRequest', $_GET)) {
+                    handleNestedGroupByRequest();
                 }
                 disconnectFromDB();
             }
         }
-
+        
+//Recognizes whether something is a POST or GET request
         if (isset($_POST['insertQueryRequest']) 
         || isset($_POST['updateRoomQueryRequest']) 
         || isset($_POST['selectionQueryRequest'])
         || isset($_POST['deleteQueryRequest'])
         || isset($_POST['selectionQueryRequest'])
         || isset($_POST['divisionQueryRequest'])
-        ) {
+        || isset($_POST['havingQueryRequest'])) {
             handlePOSTRequest();
         } 
         
         else if (isset($_GET['selectTupleRequest'])
         || isset($_GET['displayTupleRequest'])
         || isset($_GET['projectionQueryRequest'])
-        || isset($_GET['joinQueryRequest'])) {
+        || isset($_GET['joinQueryRequest'])
+        || isset($_GET['groupByQueryRequest'])
+        || isset($_GET['nestedGroupByQueryRequest'])) {
             handleGETRequest();
         }
 		
 	
          ?>
     </body>
-    <script>
-    // function menuClick(id) {
-    //     var x = document.getElementById(id+"-");
-    //     if (x.style.display === "none") {
-    //         x.style.display = "block";
-    //     } else {
-    //         x.style.display = "none";
-    //     }
-    // }
-    </script>
 </html>
